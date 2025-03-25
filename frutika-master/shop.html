@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mudivili - Tamil Children's Literature for the Diaspora">
+
+	<!-- title -->
+	<title>Shop - Mudivili</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/mudivili-photo/icons8-open-book-parakeet-color-16.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<!-- custom styles for enhanced product cards -->
+	<style>
+		/* Product card styles for shop page */
+		.single-product-item {
+			position: relative;
+			overflow: visible;
+			transition: all 0.3s ease;
+			margin-bottom: 40px;
+			border-radius: 8px;
+			box-shadow: 0 0 15px rgba(0,0,0,0.1);
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			height: auto !important;
+			min-height: 250px;
+			padding-bottom: 20px;
+			width: 100%;
+		}
+		.single-product-item:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+		}
+		.product-image {
+			position: relative;
+			width: 20%;
+			min-width: 180px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 15px;
+		}
+		.product-image img {
+			transition: transform 0.8s ease;
+			max-height: 220px;
+			object-fit: contain;
+			width: auto;
+			max-width: 100%;
+		}
+		.single-product-item:hover .product-image img {
+			transform: scale(1.05);
+		}
+		.product-info {
+			padding: 15px 20px;
+			background: #fff;
+			text-align: left;
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+		}
+		.product-description {
+			font-size: 14px !important;
+			line-height: 1.6 !important;
+			margin: 15px 0 !important;
+			color: #555 !important;
+			overflow: visible !important;
+			height: auto !important;
+			max-height: none !important;
+			-webkit-line-clamp: unset !important;
+			-webkit-box-orient: unset !important;
+			display: block !important;
+			white-space: normal !important;
+			text-overflow: clip !important;
+		}
+		.product-categories {
+			margin-top: 15px;
+			font-size: 13px;
+			color: #777;
+		}
+		.product-categories span {
+			display: inline-block;
+			background: #f8f9fa;
+			padding: 3px 8px;
+			margin-right: 5px;
+			margin-bottom: 5px;
+			border-radius: 3px;
+			font-size: 11px;
+			color: #555;
+		}
+		.product-actions {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 15px;
+			padding-top: 10px;
+			border-top: 1px solid #eee;
+		}
+		.view-details {
+			display: none;
+		}
+		.cart-btn {
+			width: 100%;
+			max-width: 300px;
+			text-align: center;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+			text-decoration: none;
+		}
+		.cart-btn:hover {
+			background-color: #e67615;
+			text-decoration: none;
+		}
+		.language-badge {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			background: rgba(242, 129, 35, 0.9);
+			color: #fff;
+			padding: 3px 8px;
+			border-radius: 3px;
+			font-size: 12px;
+			z-index: 10;
+		}
+		.single-product-item h3 {
+			color: #333;
+			font-size: 20px;
+			margin-bottom: 5px;
+			line-height: 1.3;
+		}
+		p.product-price {
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+		
+		/* Collection section styles */
+		.collection-item {
+			text-align: center;
+			box-shadow: 0 0 15px rgba(0,0,0,0.1);
+			border-radius: 8px;
+			padding: 30px 15px;
+			transition: all 0.3s ease;
+			height: 100%;
+		}
+		.collection-item:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+		}
+		.collection-image {
+			margin-bottom: 20px;
+		}
+		.collection-image img {
+			max-height: 200px;
+			width: auto;
+		}
+		.collection-title {
+			font-size: 22px;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		.view-all-btn {
+			display: inline-block;
+			background-color: #F28123;
+			color: #fff;
+			padding: 10px 25px;
+			border-radius: 50px;
+			font-weight: 700;
+			margin-top: 30px;
+			transition: all 0.3s;
+			text-decoration: none;
+		}
+		.view-all-btn:hover {
+			background-color: #051922;
+			color: #F28123;
+		}
+		
+		/* Responsive styles for smaller screens */
+		@media (max-width: 992px) {
+			.single-product-item {
+				flex-direction: column;
+				height: auto;
+			}
+			.product-image, .product-info {
+				width: 100%;
+			}
+			.product-image {
+				padding: 15px 15px 0 15px;
+				display: flex;
+				justify-content: center;
+				min-width: auto;
+			}
+			.product-image img {
+				max-height: 200px;
+			}
+			.product-info {
+				padding: 15px;
+			}
+		}
+		
+		/* Shopping Cart Styles */
+		.cart-count {
+			position: absolute;
+			top: -8px;
+			right: -8px;
+			background-color: #F28123;
+			color: white;
+			font-size: 12px;
+			font-weight: bold;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.shopping-cart {
+			position: relative;
+			display: inline-block;
+		}
+
+		#cart-notification {
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.add-to-cart-btn:hover {
+			background-color: #e67615;
+			text-decoration: none;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/mudivili-photo/logo.png" alt="Mudivili">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li><a href="index.html">Home</a>
+								
+								</li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="#">Collections</a>
+									<ul class="sub-menu">
+										<li><a href="shop.html#first-steps">First Steps in Tamil</a></li>
+										<li><a href="shop.html#heritage">Tamil Heritage</a></li>
+										<li><a href="shop.html#devotional">Devotional Journey</a></li>
+										<li><a href="shop.html#playtime">Tamil Playtime</a></li>
+										<li><a href="shop.html#resilience">Resilience & Awareness</a></li>
+										<li><a href="shop.html#wisdom">Wisdom in Literature</a></li>
+									</ul>
+								</li>
+								<li><a href="news.html">Blog</a>
+									<ul class="sub-menu">
+										<li><a href="news.html">Blog</a></li>
+										<li><a href="single-news.html">Single Post</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+								<li class="current-list-item"><a href="shop.html">Shop</a>
+									<ul class="sub-menu">
+										<li><a href="shop.html">All Books</a></li>
+										<li><a href="checkout.html">Check Out</a></li>
+										<li><a href="single-product.html">Book Details</a></li>
+										<li><a href="cart.html">Cart</a></li>
+									</ul>
+								</li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart.html">
+											<i class="fas fa-shopping-cart"></i>
+											<span id="cart-count" class="cart-count"></span>
+										</a>
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+								
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search area -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p class="translate" data-en="Tamil Children's Books" data-ta="தமிழ் குழந்தைகள் புத்தகங்கள்" data-de="Tamil Kinderbücher">Tamil Children's Books</p>
+						<h1 class="translate" data-en="Our Collection" data-ta="எங்கள் தொகுப்பு" data-de="Unsere Sammlung">Our Collection</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	
+
+
+	<!-- products -->
+	<div class="product-section mb-150" id="all-books">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">	
+						<h3><span class="orange-text">All</span> Books</h3>
+						<p>Browse our complete collection of Tamil children's books</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="product-filters">
+						<ul>
+							<li class="active" data-filter="*">All</li>
+							<li data-filter=".first-steps">First Steps in Tamil</li>
+							<li data-filter=".heritage">Tamil Heritage</li>
+							<li data-filter=".devotional">Devotional Journey</li>
+							<li data-filter=".playtime">Tamil Playtime</li>
+							<li data-filter=".resilience">Resilience & Awareness</li>
+							<li data-filter=".wisdom">Wisdom in Literature</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="row product-lists" style="display: flex; flex-wrap: wrap;">
+				<!-- Devotional Journey Books -->
+				<div class="col-lg-12 col-md-12 devotional">
+					<div class="single-product-item" data-product-id="devotional-book-1">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/mudivili-photo/devotional-book-2.png" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>எம் மொழியில் இறை வணக்கம் - En Mozhiyil Iari Vanakkam</h3>
+							<p class="product-price" data-price="8.50"><span>Hardcover</span> £8.50</p>
+							<div class="product-description">
+								Collection of 11 Tamil slogams from different devotional schools. Each slogam is accompanied by a colourful illustration and a QR code that links to a recording of the beautifully recited the slogam.
+							</div>
+							<div class="product-categories">
+								<span>Ages 5-10</span>
+								<span>Devotional</span>
+								<span>Prayer</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 devotional">
+					<div class="single-product-item" data-product-id="devotional-book-2">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>வெற்றிவேல் முருகனுக்கு அரோகரா - Vettrivel Muruganukku Arogara</h3>
+							<p class="product-price" data-price="10.99"><span>Hardcover</span> £10.99</p>
+							<div class="product-description">
+								A tale about Tamizh Lord Murugan with a collection of his story, from childhood till adulthood and some unique stories of Murugan the veeran.
+							</div>
+							<div class="product-categories">
+								<span>Ages 6-12</span>
+								<span>Mythology</span>
+								<span>Stories</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- First Steps in Tamil Books -->
+				<div class="col-lg-12 col-md-12 first-steps">
+					<div class="single-product-item" data-product-id="first-steps-book-1">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>இப்படி அப்படி - Ippadi Appadi</h3>
+							<p class="product-price" data-price="9.00"><span>Board Book</span> £9.00</p>
+							<div class="product-description">
+								An engaging book of opposites, perfect for kids beginning to learn Tamil. This colorful book presents everyday concepts with clear contrasting pairs, making language learning intuitive and fun.
+							</div>
+							<div class="product-categories">
+								<span>Ages 2-5</span>
+								<span>Educational</span>
+								<span>Concepts</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 first-steps">
+					<div class="single-product-item" data-product-id="first-steps-book-2">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>உயிரும் தமிழும் - Uyrum Tamizhum</h3>
+							<p class="product-price" data-price="8.50"><span>Hardcover</span> £8.50</p>
+							<div class="product-description">
+								A beginner book of Tamil vowels featuring four words per letter with vibrant illustrations and engaging drawings. Each vowel is presented with clear pronunciation guides and example words that children can relate to in their daily lives.
+							</div>
+							<div class="product-categories">
+								<span>Ages 3-7</span>
+								<span>Alphabet</span>
+								<span>Educational</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 first-steps">
+					<div class="single-product-item" data-product-id="first-steps-book-3">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-4.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>உறவுகள் - Uravugal</h3>
+							<p class="product-price" data-price="7.50"><span>Paperback</span> £7.50</p>
+							<div class="product-description">
+								This educational book introduces seven different topics, along with the associated Tamil words, making language learning interactive and engaging for kids. It also includes a detailed family tree of a character named Sarah, showcasing the various Tamil names for relatives. Additionally, the book provides space for children to fill in their own family tree, encouraging them to personalize their learning experience while understanding family relationships in Tamil culture.
+							</div>
+							<div class="product-categories">
+								<span>Ages 4-8</span>
+								<span>Family</span>
+								<span>Interactive</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 first-steps">
+					<div class="single-product-item" data-product-id="first-steps-book-4">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-5.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>சாராவின் கிராமத்து பயணம் - Sarah'vin Kiramatthu Payanam</h3>
+							<p class="product-price" data-price="7.50"><span>Paperback</span> £7.50</p>
+							<div class="product-description">
+								Join Sarah on her journey back to the village, where she encounters various people and experiences along the way. The book explores different aspects of village life and the names of animals, fruits, vegetables, relatives, and vehicles she encounters. Through vivid images children will not only learn about rural life but also discover Tamil words associated with these scenarios.
+							</div>
+							<div class="product-categories">
+								<span>Ages 4-8</span>
+								<span>Cultural</span>
+								<span>Vocabulary</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 first-steps">
+					<div class="single-product-item" data-product-id="first-steps-book-5">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-6.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>தமிழ் மாதங்களின் சிறப்புகள் - Tamizh mathangalin Sirappu</h3>
+							<p class="product-price" data-price="10.99"><span>Hardcover</span> £10.99</p>
+							<div class="product-description">
+								A book that explores the months in Tamizh, highlighting the unique features and festivals of each month from Chitthirai to Panguni. Includes special events like India's Independence Day in August.
+							</div>
+							<div class="product-categories">
+								<span>Ages 5-10</span>
+								<span>Cultural</span>
+								<span>Calendar</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 first-steps">
+					<div class="single-product-item" data-product-id="first-steps-book-6">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>வாழை இலை விருந்து - Vaazhai Ilai Virunthu</h3>
+							<p class="product-price" data-price="10.99"><span>Board Book</span> £10.99</p>
+							<div class="product-description">
+								This beautifully illustrated Tamil board book is a fun and engaging way to introduce numbers to your toddler, using traditional food served on banana leaves as a cultural context for counting and number recognition.
+							</div>
+							<div class="product-categories">
+								<span>Ages 2-5</span>
+								<span>Numbers</span>
+								<span>Food</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 first-steps">
+					<div class="single-product-item" data-product-id="first-steps-book-7">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>விதைப்போம் மெய்தமிழ் - Vitheippom Mei Tamizh</h3>
+							<p class="product-price" data-price="9.50"><span>Hardcover</span> £9.50</p>
+							<div class="product-description">
+								A beginner book of Tamizh consonants featuring four words per letter with vibrant illustrations and engaging drawings. Perfect companion to உயிரும் தமிழும் (Uyrum Tamizhum) for a complete introduction to the Tamil alphabet.
+							</div>
+							<div class="product-categories">
+								<span>Ages 3-7</span>
+								<span>Alphabet</span>
+								<span>Educational</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Resilience & Awareness Books -->
+				<div class="col-lg-12 col-md-12 resilience">
+					<div class="single-product-item" data-product-id="resilience-book-1">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>கருப்பும் சிவப்பும் அழகோ அழகு - Karuppum Sivappum Azhago Azhagu</h3>
+							<p class="product-price" data-price="15.00"><span>Hardcover</span> £15.00</p>
+							<div class="product-description">
+								A book that beautifully addresses the importance of self-love and confidence. Aghila's journey accompanies the readers to embrace all skin tones, and shows the huge impact of the positive words of people around us. This book not only creates awareness but also enables the parents and children to reflect together and celebrate everyone's individuality.
+							</div>
+							<div class="product-categories">
+								<span>Ages 5-10</span>
+								<span>Self-esteem</span>
+								<span>Diversity</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 resilience">
+					<div class="single-product-item" data-product-id="resilience-book-2">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-4.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>தொடுதல் - Thoduthal</h3>
+							<p class="product-price" data-price="7.50"><span>Paperback</span> £7.50</p>
+							<div class="product-description">
+								A comprehensive book in Tamizh about good touch and bad touch, designed to educate children on personal safety and boundaries in an age-appropriate manner. This essential resource helps parents and educators address important safety topics with sensitivity.
+							</div>
+							<div class="product-categories">
+								<span>Ages 4-9</span>
+								<span>Safety</span>
+								<span>Educational</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 resilience">
+					<div class="single-product-item" data-product-id="resilience-book-3">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-5.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>நான் ஒரு - Naan Oru</h3>
+							<p class="product-price" data-price="15.00"><span>Hardcover</span> £15.00</p>
+							<div class="product-description">
+								Naan Oru... is an engaging book that introduces children to a variety of modern careers through fun riddles and vibrant illustrations. It inspires kids to think creatively about their future, making it a great conversation starter for parents and children to explore interests and ambitions together.
+							</div>
+							<div class="product-categories">
+								<span>Ages 6-10</span>
+								<span>Career</span>
+								<span>Inspirational</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 resilience">
+					<div class="single-product-item" data-product-id="resilience-book-4">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-6.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>மாற்றுத்திறன் மதிப்போம் - Mattrhu Thiran Mathippom</h3>
+							<p class="product-price" data-price="9.50"><span>Paperback</span> £9.50</p>
+							<div class="product-description">
+								A book that explores inclusivity, promoting the importance of accepting and embracing everyone. This resource aims to foster understanding and compassion among children towards those with different abilities.
+							</div>
+							<div class="product-categories">
+								<span>Ages 5-10</span>
+								<span>Inclusivity</span>
+								<span>Social Learning</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 resilience">
+					<div class="single-product-item" data-product-id="resilience-book-5">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>வெந்து தணிந்தது கோபம் - Vendhu Thanindhadhu Kobam</h3>
+							<p class="product-price" data-price="10.99"><span>Hardcover</span> £10.99</p>
+							<div class="product-description">
+								'Venthu Thanindhadhu Kobam' is an interactive book dedicated to children that showcases how to handle anger. The book features unique interactive elements like sliders, flaps, cloth components, and wheels that engage children in learning emotional regulation.
+							</div>
+							<div class="product-categories">
+								<span>Ages 3-8</span>
+								<span>Emotional Learning</span>
+								<span>Interactive</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tamil Heritage Books -->
+				<div class="col-lg-12 col-md-12 heritage">
+					<div class="single-product-item" data-product-id="heritage-book-1">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>ஐ- I (ஐந்திணை நிலங்கள்- Five Landforms)</h3>
+							<p class="product-price" data-price="12.50"><span>Hardcover</span> £12.50</p>
+							<div class="product-description">
+								In the Sangam literature the landscape is divided into five distinct landforms: Kurunji, Mullai, Marutham, Neithal and Paalai, known as Ainthinaikal ஐந்திணைகள். This interactive book shows the flora, fauna, emotions and cultural history associated with each landscape.
+							</div>
+							<div class="product-categories">
+								<span>Ages 6-12</span>
+								<span>Cultural</span>
+								<span>Literature</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 heritage">
+					<div class="single-product-item" data-product-id="heritage-book-2">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>குறிஞ்சி - Kurunji</h3>
+							<p class="product-price" data-price="10.99"><span>Board Book</span> £10.99</p>
+							<div class="product-description">
+								In Tamil, குறிஞ்சி refers to the mountains and the land around them. This interactive board book has large flaps and explores the amazing world of mountains, including the landforms, water, plants, and animals that live there. Perfect for kids to learn about one of the ஐந்திணைகள்.
+							</div>
+							<div class="product-categories">
+								<span>Ages 3-8</span>
+								<span>Cultural</span>
+								<span>Interactive</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 heritage">
+					<div class="single-product-item" data-product-id="heritage-book-3">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-4.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>பொங்கலோ பொங்கல் - Pongalo Pongal</h3>
+							<p class="product-price" data-price="10.99"><span>Hardcover</span> £10.99</p>
+							<div class="product-description">
+								This book explores Pongal, the Tamil traditional harvest festival, and delves into the vibrant colors and rich traditions. The book also explores the colours in Tamil, making it a perfect book to learn about Pongal and colours.
+							</div>
+							<div class="product-categories">
+								<span>Ages 4-9</span>
+								<span>Festival</span>
+								<span>Colors</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 heritage">
+					<div class="single-product-item" data-product-id="heritage-book-4">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-5.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>முல்லை - Mullai</h3>
+							<p class="product-price" data-price="10.99"><span>Board Book</span> £10.99</p>
+							<div class="product-description">
+								Mullai: A book About the Forest Ecosystem takes your little ones on an exciting adventure through the lively world of forests. In Tamil, Mullai symbolizes the beauty and abundance of the forest, and this book brings that richness to life!
+							</div>
+							<div class="product-categories">
+								<span>Ages 3-8</span>
+								<span>Nature</span>
+								<span>Cultural</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tamil Playtime Books -->
+				<div class="col-lg-12 col-md-12 playtime">
+					<div class="single-product-item" data-product-id="playtime-book-1">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-6.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>சொற்புதிர் 1 - Sorputir 1</h3>
+							<p class="product-price" data-price="5.50"><span>Puzzle Set</span> £5.50</p>
+							<div class="product-description">
+								Engaging puzzles for learning Tamizh in an interactive way, focused on words with similar phonetics to build language skills. The set is composed of 20 words, 60 pieces that can be assembled to form complete Tamil words and phrases.
+							</div>
+							<div class="product-categories">
+								<span>Ages 5-10</span>
+								<span>Educational</span>
+								<span>Puzzle</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 playtime">
+					<div class="single-product-item" data-product-id="playtime-book-2">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>சொற்புதிர் 2 - Sorputir 2</h3>
+							<p class="product-price" data-price="5.50"><span>Puzzle Set</span> £5.50</p>
+							<div class="product-description">
+								EU ONLY. Engaging puzzles for learning Tamizh in an interactive way, focused on simple words made of three letters and associate images to the Tamizh letters. The set is composed of 20 words, 60 pieces.
+							</div>
+							<div class="product-categories">
+								<span>Ages 5-10</span>
+								<span>Educational</span>
+								<span>Puzzle</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Wisdom in Literature Books -->
+				<div class="col-lg-12 col-md-12 wisdom">
+					<div class="single-product-item" data-product-id="wisdom-book-1">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>ஆத்திசூடி 1 - Aathichudi 1</h3>
+							<p class="product-price" data-price="8.50"><span>Hardcover</span> £8.50</p>
+							<div class="product-description">
+								Aathichudi, the classical Tamil poem written by Auveyaar. Each verse of the text starts in alphabetical order in Tamil. The poem conveys essential values, discipline, kindness, education and humility. The book includes English translation and illustrates each verse through vivid and rich illustrations. (அ-ஃ)
+							</div>
+							<div class="product-categories">
+								<span>Ages 6-12</span>
+								<span>Classical</span>
+								<span>Poetry</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 wisdom">
+					<div class="single-product-item" data-product-id="wisdom-book-2">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>ஆத்திசூடி 2 - Aathichudi 2</h3>
+							<p class="product-price" data-price="8.50"><span>Hardcover</span> £8.50</p>
+							<div class="product-description">
+								Aathichudi, the classical Tamil poem written by Auveyaar. Each verse of the text starts with the alphabetical order in Tamil. The poem conveys essential values, discipline, kindness, education and humility. The book includes English translation and illustrates each verse through vivid and rich illustrations. (க-ன)
+							</div>
+							<div class="product-categories">
+								<span>Ages 6-12</span>
+								<span>Classical</span>
+								<span>Poetry</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 wisdom">
+					<div class="single-product-item" data-product-id="wisdom-book-3">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-4.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>திருக்குறள் - Thirukkural</h3>
+							<p class="product-price" data-price="10.99"><span>Board Book</span> £10.99</p>
+							<div class="product-description">
+								Interactive book with colorful illustrations and English translation of the classical work written by Thiruvallurar. Thirukkural is a classical collection of two-verse poems, containing 1330 kurals, each verse teaching a moral lesson. This board book will accompany kids through 10 different Kurals.
+							</div>
+							<div class="product-categories">
+								<span>Ages 7-12</span>
+								<span>Classical</span>
+								<span>Philosophy</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 wisdom">
+					<div class="single-product-item" data-product-id="wisdom-book-4">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-5.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>பாரதியார் ஆத்திசூடி - Bharathiyar Aathichudi</h3>
+							<p class="product-price" data-price="8.50"><span>Hardcover</span> £8.50</p>
+							<div class="product-description">
+								Mahakavi Bharathiyar, a great poet who fought against British Colonization, the caste system, and advocated for women's freedom. This book explores moral values using the Uyir Ezhutthukkal of the Tamizh Alphabet through Bharathiyar's influential work.
+							</div>
+							<div class="product-categories">
+								<span>Ages 6-12</span>
+								<span>Classical</span>
+								<span>Poetry</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Additional Children's Storybooks (from Lessons for Life) -->
+				<div class="col-lg-12 col-md-12 resilience">
+					<div class="single-product-item" data-product-id="additional-book-1">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-6.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>அப்பா பிரியாணி சமைக்கலாமா? - Appa Biriyani Sameikkelamo?</h3>
+							<p class="product-price" data-price="9.99"><span>Hardcover</span> £9.99</p>
+							<div class="product-description">
+								Join Thara on a flavorful adventure on her birthday with her dad, whilst she explores the different ingredients and the joy of sharing food with loved ones. This heartwarming story celebrates family bonds and cultural traditions.
+							</div>
+							<div class="product-categories">
+								<span>Ages 4-8</span>
+								<span>Family</span>
+								<span>Food</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 first-steps">
+					<div class="single-product-item" data-product-id="additional-book-2">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>அம்மா பாடும் பாட்டு - Amma Paadum Paattu</h3>
+							<p class="product-price" data-price="10.99"><span>Hardcover</span> £10.99</p>
+							<div class="product-description">
+								A collection of Tamil classic nursery rhymes ranging from 'Tho Tho Nai Kutty' to 'Kai Veesamma Kai Veesu'. This book is perfect for kids to engage with the Tamizh language through these classic rhymes.
+							</div>
+							<div class="product-categories">
+								<span>Ages 2-6</span>
+								<span>Rhymes</span>
+								<span>Musical</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 resilience">
+					<div class="single-product-item" data-product-id="additional-book-3">
+						<div class="language-badge">Bilingual</div>
+						<div class="product-image">
+							<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
+						</div>
+						<div class="product-info">
+							<h3>அம்மாட்ட போணும் - Ammatthe Ponum</h3>
+							<p class="product-price" data-price="10.99"><span>Hardcover</span> £10.99</p>
+							<div class="product-description">
+								Sanjay and Shri embark on an adventure to help animals reunite with their families. In this journey, they meet different animals from various habitats in colorful scenarios, learning about animal families and habitats.
+							</div>
+							<div class="product-categories">
+								<span>Ages 4-8</span>
+								<span>Animals</span>
+								<span>Adventure</span>
+							</div>
+							<div class="product-actions">
+								<a href="#" class="cart-btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="pagination-wrap">
+						<ul>
+							<li><a href="#">Prev</a></li>
+							<li><a href="#">1</a></li>
+							<li><a class="active" href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end products -->
+
+	<!-- features section -->
+	<div class="features-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature text-center">
+						<i class="fas fa-book-open"></i>
+						<h4 class="translate" data-en="Bilingual Content" data-ta="இருமொழி உள்ளடக்கம்" data-de="Zweisprachiger Inhalt">Bilingual Content</h4>
+						<p class="translate" data-en="All our books include both Tamil and English text" data-ta="எங்கள் அனைத்து புத்தகங்களும் தமிழ் மற்றும் ஆங்கில உரையைக் கொண்டுள்ளன" data-de="Alle unsere Bücher enthalten sowohl tamilischen als auch englischen Text">All our books include both Tamil and English text</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature text-center">
+						<i class="fas fa-shipping-fast"></i>
+						<h4 class="translate" data-en="Worldwide Shipping" data-ta="உலகளாவிய அனுப்புதல்" data-de="Weltweiter Versand">Worldwide Shipping</h4>
+						<p class="translate" data-en="We ship to Tamil diaspora communities globally" data-ta="உலகெங்கிலும் உள்ள தமிழ் புலம்பெயர் சமூகங்களுக்கு நாங்கள் அனுப்புகிறோம்" data-de="Wir versenden an tamilische Diaspora-Gemeinschaften weltweit">We ship to Tamil diaspora communities globally</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature text-center">
+						<i class="fas fa-crown"></i>
+						<h4 class="translate" data-en="Authentic Content" data-ta="உண்மையான உள்ளடக்கம்" data-de="Authentischer Inhalt">Authentic Content</h4>
+						<p class="translate" data-en="Created by Tamil language and culture experts" data-ta="தமிழ் மொழி மற்றும் கலாச்சார நிபுணர்களால் உருவாக்கப்பட்டது" data-de="Erstellt von Experten für tamilische Sprache und Kultur">Created by Tamil language and culture experts</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-feature text-center">
+						<i class="fas fa-heart"></i>
+						<h4 class="translate" data-en="Cultural Connection" data-ta="கலாச்சார இணைப்பு" data-de="Kulturelle Verbindung">Cultural Connection</h4>
+						<p class="translate" data-en="Helping diaspora children connect with their heritage" data-ta="புலம்பெயர் குழந்தைகள் தங்கள் பாரம்பரியத்துடன் இணைய உதவுகிறது" data-de="Hilft Diaspora-Kindern, sich mit ihrem Erbe zu verbinden">Helping diaspora children connect with their heritage</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end features section -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/1.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/2.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/3.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/4.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>Mudivili is a Tamil children's bookstore designed for future generations of the Tamil diaspora to explore and engage with the Tamil language.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<li>Mudivili Books, Stuttgart, Germany</li>
+							<li>hello@mudivili.com</li>
+							<li>+49 123 456 7890</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="shop.html">Collections</a></li>
+							<li><a href="news.html">Blog</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Subscribe</h2>
+						<p>Subscribe to our mailing list to get the latest updates on new books and events.</p>
+						<form action="index.html">
+							<input type="email" placeholder="Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2025 - <a href="#">Mudivili</a>, All Rights Reserved.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+	<!-- language toggle script -->
+	<script src="assets/js/language-toggle.js"></script>
+	
+</body>
+</html>

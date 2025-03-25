@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mudivili - Tamil Children's Literature for the Diaspora">
+
+	<!-- title -->
+	<title>Check Out - Mudivili</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/mudivili-photo/icons8-open-book-parakeet-color-16.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<!-- Shopping cart styles -->
+	<style>
+		.cart-count {
+			position: absolute;
+			top: -8px;
+			right: -8px;
+			background-color: #F28123;
+			color: white;
+			font-size: 12px;
+			font-weight: bold;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.shopping-cart {
+			position: relative;
+			display: inline-block;
+		}
+		
+		/* Payment method styles */
+		.payment-method-container {
+			margin-top: 20px;
+		}
+		
+		.payment-method {
+			display: block;
+			margin-bottom: 10px;
+			padding: 15px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			transition: all 0.3s;
+		}
+		
+		.payment-method:hover, .payment-method.active {
+			border-color: #F28123;
+			background-color: #fff9f5;
+		}
+		
+		.payment-method input[type="radio"] {
+			margin-right: 10px;
+		}
+		
+		.payment-info {
+			margin-top: 10px;
+			padding: 15px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			background-color: #f9f9f9;
+			display: none;
+		}
+		
+		.payment-info.active {
+			display: block;
+		}
+		
+		.payment-form label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: 600;
+		}
+		
+		.payment-form input, .payment-form select {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ddd;
+			border-radius: 3px;
+		}
+		
+		.card-row {
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		.card-row > div {
+			width: 48%;
+		}
+		
+		#bank-details {
+			margin-top: 10px;
+			padding: 15px;
+			background: #f9f9f9;
+			border-radius: 5px;
+		}
+		
+		#bank-details p {
+			margin-bottom: 5px;
+		}
+		
+		.order-complete {
+			display: none;
+			text-align: center;
+			padding: 30px;
+			margin-top: 20px;
+			background-color: #f8f9fa;
+			border-radius: 5px;
+		}
+		
+		.order-complete i {
+			font-size: 60px;
+			color: #4CAF50;
+			margin-bottom: 20px;
+		}
+		
+		.empty-checkout-message {
+			text-align: center;
+			padding: 40px;
+			background-color: #f9f9f9;
+			border-radius: 5px;
+			margin-bottom: 30px;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/mudivili-photo/logo.png" alt="Mudivili">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li><a href="index.html">Home</a>
+								
+								</li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="#">Collections</a>
+									<ul class="sub-menu">
+										<li><a href="shop.html#first-steps">First Steps in Tamil</a></li>
+										<li><a href="shop.html#heritage">Tamil Heritage</a></li>
+										<li><a href="shop.html#devotional">Devotional Journey</a></li>
+										<li><a href="shop.html#playtime">Tamil Playtime</a></li>
+										<li><a href="shop.html#resilience">Resilience & Awareness</a></li>
+										<li><a href="shop.html#wisdom">Wisdom in Literature</a></li>
+									</ul>
+								</li>
+								<li><a href="news.html">Blog</a>
+									<ul class="sub-menu">
+										<li><a href="news.html">Blog</a></li>
+										<li><a href="single-news.html">Single Post</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+								<li class="current-list-item"><a href="shop.html">Shop</a>
+									<ul class="sub-menu">
+										<li><a href="shop.html">All Books</a></li>
+										<li class="current-list-item"><a href="checkout.html">Check Out</a></li>
+										<li><a href="single-product.html">Book Details</a></li>
+										<li><a href="cart.html">Cart</a></li>
+									</ul>
+								</li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart.html">
+											<i class="fas fa-shopping-cart"></i>
+											<span id="cart-count" class="cart-count"></span>
+										</a>
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search area -->
+	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Tamil Children's Books</p>
+						<h1>Complete Your Purchase</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- check out section -->
+	<div class="checkout-section mt-150 mb-150">
+		<div class="container">
+			<div id="empty-checkout" class="row" style="display: none;">
+				<div class="col-lg-12">
+					<div class="empty-checkout-message">
+						<i class="fas fa-shopping-cart" style="font-size: 64px; color: #ddd; margin-bottom: 20px;"></i>
+						<h3>Your cart is empty</h3>
+						<p>Add some books to your cart before proceeding to checkout.</p>
+						<a href="shop.html" class="boxed-btn mt-4">Continue Shopping</a>
+					</div>
+				</div>
+			</div>
+			
+			<div id="checkout-form" class="row">
+				<div class="col-lg-8">
+					<div class="checkout-accordion-wrap">
+						<div class="accordion" id="accordionExample">
+						  <div class="card single-accordion">
+						    <div class="card-header" id="headingOne">
+						      <h5 class="mb-0">
+						        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						          Customer Information
+						        </button>
+						      </h5>
+						    </div>
+
+						    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+						      <div class="card-body">
+						        <div class="billing-address-form">
+						        	<form id="customer-info-form">
+						        		<p><input type="text" id="customer-name" placeholder="Full Name" required></p>
+						        		<p><input type="email" id="customer-email" placeholder="Email" required></p>
+						        		<p><input type="text" id="customer-address" placeholder="Street Address" required></p>
+										<p><input type="text" id="customer-city" placeholder="City" required></p>
+										<p><input type="text" id="customer-postcode" placeholder="Postal Code" required></p>
+										<p><input type="text" id="customer-country" placeholder="Country" required></p>
+						        		<p><input type="tel" id="customer-phone" placeholder="Phone" required></p>
+						        		<p><textarea name="notes" id="order-notes" cols="30" rows="10" placeholder="Order Notes (Optional)"></textarea></p>
+						        	</form>
+						        </div>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="card single-accordion">
+						    <div class="card-header" id="headingTwo">
+						      <h5 class="mb-0">
+						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						          Shipping Options
+						        </button>
+						      </h5>
+						    </div>
+						    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						      <div class="card-body">
+						        <div class="shipping-options-form">
+									<div class="form-group">
+										<div class="custom-control custom-radio mb-3">
+											<input type="radio" id="standard-shipping" name="shipping-option" class="custom-control-input" value="standard" checked>
+											<label class="custom-control-label" for="standard-shipping">Standard Shipping (£5.00) - 7-14 business days</label>
+										</div>
+										<div class="custom-control custom-radio mb-3">
+											<input type="radio" id="express-shipping" name="shipping-option" class="custom-control-input" value="express">
+											<label class="custom-control-label" for="express-shipping">Express Shipping (£12.00) - 3-5 business days</label>
+										</div>
+									</div>
+						        </div>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="card single-accordion">
+						    <div class="card-header" id="headingThree">
+						      <h5 class="mb-0">
+						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          Payment Method
+						        </button>
+						      </h5>
+						    </div>
+						    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+						      <div class="card-body">
+						        <div class="payment-method-container">
+									<!-- Credit/Debit Card -->
+									<label class="payment-method active">
+										<input type="radio" name="payment-method" value="card" checked>
+										<span>Credit / Debit Card</span>
+									</label>
+									
+									<div id="card-payment-form" class="payment-info payment-form active">
+										<div class="form-group">
+											<label for="card-name">Name on Card</label>
+											<input type="text" id="card-name" placeholder="Name as it appears on your card" required>
+										</div>
+										<div class="form-group">
+											<label for="card-number">Card Number</label>
+											<input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+										</div>
+										<div class="card-row">
+											<div class="form-group">
+												<label for="card-expiry">Expiry Date</label>
+												<input type="text" id="card-expiry" placeholder="MM/YY" required>
+											</div>
+											<div class="form-group">
+												<label for="card-cvc">CVC</label>
+												<input type="text" id="card-cvc" placeholder="123" required>
+											</div>
+										</div>
+										
+										<p class="mt-3 text-muted small">
+											<i class="fas fa-lock"></i> Your payment information is secure. We use SSL encryption to keep your data safe.
+										</p>
+									</div>
+									
+									<!-- PayPal -->
+									<label class="payment-method">
+										<input type="radio" name="payment-method" value="paypal">
+										<span>PayPal</span>
+									</label>
+									
+									<div id="paypal-payment-form" class="payment-info">
+										<p>You will be redirected to PayPal to complete your payment securely.</p>
+										<p class="small text-muted">Note: You can pay with your PayPal account or with a credit/debit card through PayPal without creating an account.</p>
+									</div>
+									
+									<!-- Bank Transfer -->
+									<label class="payment-method">
+										<input type="radio" name="payment-method" value="bank-transfer">
+										<span>Bank Transfer</span>
+									</label>
+									
+									<div id="bank-transfer-payment-form" class="payment-info">
+										<p>Please use the following information to make a bank transfer:</p>
+										<div id="bank-details">
+											<p><strong>Bank:</strong> Example Bank</p>
+											<p><strong>Account Name:</strong> Mudivili Books</p>
+											<p><strong>IBAN:</strong> DE12 3456 7890 1234 5678 90</p>
+											<p><strong>BIC/SWIFT:</strong> EXAMPLEXXX</p>
+											<p><strong>Reference:</strong> <span id="order-reference">ORD-[OrderID]</span></p>
+										</div>
+										<p class="mt-3 small">Please include your order reference in the payment details. Your order will be processed once we receive your payment.</p>
+									</div>
+								</div>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="order-details-wrap">
+						<table class="order-details">
+							<thead>
+								<tr>
+									<th>Your Order Details</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody class="order-details-body">
+								<!-- Order items will be inserted here by JavaScript -->
+							</tbody>
+							<tbody class="checkout-details">
+								<tr>
+									<td>Subtotal</td>
+									<td class="subtotal-value">£0.00</td>
+								</tr>
+								<tr>
+									<td>Shipping</td>
+									<td class="shipping-value">£5.00</td>
+								</tr>
+								<tr>
+									<td>Total</td>
+									<td class="total-value">£0.00</td>
+								</tr>
+							</tbody>
+						</table>
+						<button id="place-order-btn" class="boxed-btn">Place Order</button>
+					</div>
+					
+					<!-- Order complete message (hidden by default) -->
+					<div id="order-complete" class="order-complete">
+						<i class="fas fa-check-circle"></i>
+						<h3>Thank You For Your Order!</h3>
+						<p>Your order has been received and is now being processed.</p>
+						<p>Your order reference: <strong id="completed-order-reference">ORD-123456</strong></p>
+						<p>We've sent a confirmation to your email address.</p>
+						<a href="shop.html" class="boxed-btn mt-4">Continue Shopping</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end check out section -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/1.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/2.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/3.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/4.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>Mudivili is a Tamil children's bookstore designed for future generations of the Tamil diaspora to explore and engage with the Tamil language.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<li>Mudivili Books, Stuttgart, Germany</li>
+							<li>hello@mudivili.com</li>
+							<li>+49 123 456 7890</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="shop.html">Collections</a></li>
+							<li><a href="news.html">Blog</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Subscribe</h2>
+						<p>Subscribe to our mailing list to get the latest updates on new books and events.</p>
+						<form action="index.html">
+							<input type="email" placeholder="Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+	
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2025 - <a href="#">Mudivili</a>, All Rights Reserved.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+	
+	<!-- Checkout JavaScript -->
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		// Generate a random order reference
+		const orderRef = 'ORD-' + Math.floor(100000 + Math.random() * 900000);
+		document.getElementById('order-reference').textContent = orderRef;
+		document.getElementById('completed-order-reference').textContent = orderRef;
+		
+		// Load cart items
+		loadOrderDetails();
+		
+		// Set up event listeners
+		setupPaymentMethodToggles();
+		setupShippingOptions();
+		setupPlaceOrderButton();
+		
+		// Update cart count
+		updateCartCount();
+	});
+
+	// Load order details from localStorage
+	function loadOrderDetails() {
+		const cartData = JSON.parse(localStorage.getItem('mudiviliCart')) || [];
+		const orderDetailsBody = document.querySelector('.order-details-body');
+		
+		if (cartData.length === 0) {
+			// Show empty checkout message
+			document.getElementById('empty-checkout').style.display = 'block';
+			document.getElementById('checkout-form').style.display = 'none';
+			return;
+		}
+		
+		// Clear existing order items
+		orderDetailsBody.innerHTML = '';
+		
+		// Add cart items to order details
+		let subtotal = 0;
+		
+		// Add header row
+		const headerRow = document.createElement('tr');
+		headerRow.innerHTML = `
+			<td>Item</td>
+			<td>Total</td>
+		`;
+		orderDetailsBody.appendChild(headerRow);
+		
+		// Add item rows
+		cartData.forEach(item => {
+			const itemTotal = item.price * item.quantity;
+			subtotal += itemTotal;
+			
+			const row = document.createElement('tr');
+			row.innerHTML = `
+				<td>${item.title} × ${item.quantity}</td>
+				<td>£${itemTotal.toFixed(2)}</td>
+			`;
+			
+			orderDetailsBody.appendChild(row);
+		});
+		
+		// Update order totals
+		updateOrderTotals(subtotal);
+	}
+
+	// Update order totals
+	function updateOrderTotals(subtotal) {
+		const shippingOption = document.querySelector('input[name="shipping-option"]:checked').value;
+		const shipping = shippingOption === 'standard' ? 5.00 : 12.00;
+		const total = subtotal + shipping;
+		
+		document.querySelector('.checkout-details .subtotal-value').textContent = `£${subtotal.toFixed(2)}`;
+		document.querySelector('.checkout-details .shipping-value').textContent = `£${shipping.toFixed(2)}`;
+		document.querySelector('.checkout-details .total-value').textContent = `£${total.toFixed(2)}`;
+	}
+
+	// Setup payment method toggles
+	function setupPaymentMethodToggles() {
+		const paymentMethods = document.querySelectorAll('.payment-method');
+		const paymentInfos = document.querySelectorAll('.payment-info');
+		
+		paymentMethods.forEach(method => {
+			method.addEventListener('click', function() {
+				// Reset all payment methods
+				paymentMethods.forEach(m => m.classList.remove('active'));
+				paymentInfos.forEach(info => info.classList.remove('active'));
+				
+				// Set the clicked method as active
+				this.classList.add('active');
+				const value = this.querySelector('input').value;
+				document.getElementById(`${value}-payment-form`).classList.add('active');
+				
+				// Check the radio button
+				this.querySelector('input').checked = true;
+			});
+		});
+	}
+	
+	// Setup shipping options
+	function setupShippingOptions() {
+		const shippingOptions = document.querySelectorAll('input[name="shipping-option"]');
+		
+		shippingOptions.forEach(option => {
+			option.addEventListener('change', function() {
+				// Get current subtotal
+				const subtotalText = document.querySelector('.checkout-details .subtotal-value').textContent;
+				const subtotal = parseFloat(subtotalText.replace('£', ''));
+				
+				// Update order totals
+				updateOrderTotals(subtotal);
+			});
+		});
+	}
+	
+	// Setup place order button
+	function setupPlaceOrderButton() {
+		document.getElementById('place-order-btn').addEventListener('click', function() {
+			// Validate form
+			const customerInfoForm = document.getElementById('customer-info-form');
+			if (!customerInfoForm.checkValidity()) {
+				alert('Please fill in all required fields in the Customer Information section.');
+				// Open the customer info accordion
+				$('#collapseOne').collapse('show');
+				return;
+			}
+			
+			// Get payment method
+			const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+			
+			// Validate payment info based on method
+			if (paymentMethod === 'card') {
+				const cardName = document.getElementById('card-name').value;
+				const cardNumber = document.getElementById('card-number').value;
+				const cardExpiry = document.getElementById('card-expiry').value;
+				const cardCvc = document.getElementById('card-cvc').value;
+				
+				if (!cardName || !cardNumber || !cardExpiry || !cardCvc) {
+					alert('Please fill in all card details.');
+					// Open the payment accordion
+					$('#collapseThree').collapse('show');
+					return;
+				}
+				
+				// Here you would normally send the card info to a payment processor
+				// For this demo, we'll simulate a successful payment
+				processPayment(paymentMethod);
+			} 
+			else if (paymentMethod === 'paypal') {
+				// Simulating PayPal redirect
+				alert('Redirecting to PayPal for payment...');
+				
+				// Simulate return from PayPal after 2 seconds
+				setTimeout(function() {
+					processPayment(paymentMethod);
+				}, 2000);
+			}
+			else if (paymentMethod === 'bank-transfer') {
+				// For bank transfer, we can immediately "process" the order
+				// as it will be fulfilled after payment is received
+				processPayment(paymentMethod);
+			}
+		});
+	}
+	
+	// Process payment and complete order
+	function processPayment(paymentMethod) {
+		// Get customer information
+		const customerName = document.getElementById('customer-name').value;
+		const customerEmail = document.getElementById('customer-email').value;
+		const customerAddress = document.getElementById('customer-address').value;
+		const customerCity = document.getElementById('customer-city').value;
+		const customerPostcode = document.getElementById('customer-postcode').value;
+		const customerCountry = document.getElementById('customer-country').value;
+		const customerPhone = document.getElementById('customer-phone').value;
+		const orderNotes = document.getElementById('order-notes').value;
+		
+		// Get shipping option
+		const shippingOption = document.querySelector('input[name="shipping-option"]:checked').value;
+		
+		// Get order items
+		const cartData = JSON.parse(localStorage.getItem('mudiviliCart')) || [];
+		
+		// Get order totals
+		const subtotalText = document.querySelector('.checkout-details .subtotal-value').textContent;
+		const shippingText = document.querySelector('.checkout-details .shipping-value').textContent;
+		const totalText = document.querySelector('.checkout-details .total-value').textContent;
+		
+		// Create order object
+		const order = {
+			reference: document.getElementById('order-reference').textContent,
+			date: new Date().toISOString(),
+			customer: {
+				name: customerName,
+				email: customerEmail,
+				address: customerAddress,
+				city: customerCity,
+				postcode: customerPostcode,
+				country: customerCountry,
+				phone: customerPhone
+			},
+			shipping: shippingOption,
+			payment: paymentMethod,
+			notes: orderNotes,
+			items: cartData,
+			totals: {
+				subtotal: subtotalText,
+				shipping: shippingText,
+				total: totalText
+			}
+		};
+		
+		// In a real application, you would send this order to your server
+		console.log('Order placed:', order);
+		
+		// For demo purposes, we'll store the order in localStorage
+		const orders = JSON.parse(localStorage.getItem('mudiviliOrders')) || [];
+		orders.push(order);
+		localStorage.setItem('mudiviliOrders', JSON.stringify(orders));
+		
+		// Clear the cart
+		localStorage.removeItem('mudiviliCart');
+		
+		// Show order complete message
+		document.getElementById('checkout-form').style.display = 'none';
+		document.getElementById('order-complete').style.display = 'block';
+		
+		// Update cart count
+		updateCartCount();
+	}
+
+	// Update cart count in header
+	function updateCartCount() {
+		const cartData = JSON.parse(localStorage.getItem('mudiviliCart')) || [];
+		const count = cartData.reduce((total, item) => total + item.quantity, 0);
+		const cartCountElement = document.getElementById('cart-count');
+		
+		if (cartCountElement) {
+			cartCountElement.textContent = count > 0 ? count : '';
+			
+			if (count > 0) {
+				cartCountElement.style.display = 'flex';
+			} else {
+				cartCountElement.style.display = 'none';
+			}
+		}
+	}
+	</script>
+
+</body>
+</html>

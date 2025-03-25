@@ -1,0 +1,230 @@
+<!-- Add these head section styles after your existing CSS links -->
+<head>
+    <!-- ... existing head content ... -->
+    
+    <!-- Language Toggle Styles -->
+    <style id="language-toggle-style">
+      .language-btn {
+        background-color: #F28123;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-left: 15px;
+        font-weight: 600;
+        display: inline-block !important;
+        position: relative;
+        z-index: 1001;
+      }
+      
+      .language-btn:hover {
+        background-color: #E07012;
+      }
+      
+      /* Language toggle button positioning */
+      #desktop-toggle-container {
+        display: inline-block !important;
+        margin-right: 15px;
+      }
+      
+      #mobile-toggle-container {
+        position: absolute !important;
+        top: 10px !important;
+        right: 60px !important;
+        z-index: 1000 !important;
+        display: none !important;
+      }
+      
+      /* Show mobile toggle on smaller screens */
+      @media only screen and (max-width: 991px) {
+        #desktop-toggle-container {
+          display: none !important;
+        }
+        
+        #mobile-toggle-container {
+          display: block !important;
+        }
+      }
+      
+      /* Adjust for very small screens */
+      @media only screen and (max-width: 480px) {
+        #mobile-toggle-container {
+          right: 50px !important;
+        }
+        
+        .language-btn {
+          padding: 6px 12px !important;
+          font-size: 14px !important;
+        }
+      }
+      
+      /* Additional styles for Tamil language */
+      body.tamil .single-product-item h3,
+      body.tamil .section-title h3,
+      body.tamil .featured-text h2,
+      body.tamil .breadcrumb-text h1 {
+        font-family: 'Catamaran', sans-serif;
+        font-weight: 700;
+      }
+      
+      body.tamil {
+        line-height: 1.5;
+      }
+      
+      body.tamil .main-menu ul li a {
+        font-weight: 500;
+      }
+    </style>
+
+    <!-- Tamil Font Support -->
+    <style id="tamil-font-style">
+      @font-face {
+        font-family: 'Catamaran';
+        src: url('assets/fonts/Catamaran-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      body.tamil {
+        font-family: 'Catamaran', sans-serif;
+      }
+    </style>
+</head>
+
+<!-- Modify the header section to add data-i18n attributes -->
+<div class="top-header-area" id="sticker">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-sm-12 text-center">
+				<div class="main-menu-wrap">
+					<!-- logo -->
+					<div class="site-logo">
+						<a href="index.html">
+							<img src="assets/img/mudivili photo/logo.png" alt="Mudivili">
+						</a>
+					</div>
+					<!-- logo -->
+
+					<!-- menu start -->
+					<nav class="main-menu">
+						<ul>
+							<li class="current-list-item"><a href="#" data-i18n="home">Home</a>
+								<ul class="sub-menu">
+									<li><a href="index.html">Static Home</a></li>
+									<li><a href="index_2.html">Slider Home</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html" data-i18n="about">About</a></li>
+							<li><a href="#" data-i18n="collections">Collections</a>
+								<ul class="sub-menu">
+									<li><a href="shop.html#first-steps" data-i18n="first_steps">First Steps in Tamil</a></li>
+		<li><a href="shop.html#heritage" data-i18n="heritage">Tamil Heritage</a></li>
+		<li><a href="shop.html#devotional" data-i18n="devotional">Devotional Journey</a></li>
+		<li><a href="shop.html#playtime" data-i18n="playtime">Tamil Playtime</a></li>
+		<li><a href="shop.html#resilience" data-i18n="resilience">Resilience & Awareness</a></li>
+		<li><a href="shop.html#wisdom" data-i18n="wisdom">Wisdom in Literature</a></li>
+								</ul>
+							</li>
+							<li><a href="news.html" data-i18n="blog">Blog</a>
+								<ul class="sub-menu">
+									<li><a href="news.html" data-i18n="blog">Blog</a></li>
+									<li><a href="single-news.html">Single Post</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html" data-i18n="contact">Contact</a></li>
+							<li><a href="shop.html" data-i18n="shop">Shop</a>
+								<ul class="sub-menu">
+									<li><a href="shop.html" data-i18n="all_books">All Books</a></li>
+									<li><a href="checkout.html" data-i18n="checkout">Check Out</a></li>
+									<li><a href="single-product.html" data-i18n="book_details">Book Details</a></li>
+									<li><a href="cart.html" data-i18n="cart">Cart</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="header-icons">
+									<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+									<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                    <!-- Desktop language toggle will be inserted here by JavaScript -->
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+					<div class="mobile-menu"></div>
+					<!-- menu end -->
+                    
+                    <!-- Mobile language toggle will be inserted here by JavaScript -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Add data-i18n attributes to the search area -->
+<div class="search-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<span class="close-btn"><i class="fas fa-window-close"></i></span>
+				<div class="search-bar">
+					<div class="search-bar-tablecell">
+						<h3 data-i18n="search_for">Search For:</h3>
+						<input type="text" placeholder="Keywords" data-i18n="keywords">
+						<button type="submit" class="search_button" data-i18n="search_button">Search <i class="fas fa-search"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Add data-i18n attributes to the hero area -->
+<div class="hero-area hero-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 offset-lg-2 text-center">
+				<div class="hero-text">
+					<div class="hero-text-tablecell">
+						<p class="subtitle" data-i18n="welcome">Welcome to Mudivili</p>
+						<h1><span>முடிவிலி</span> - <span data-i18n="bookstore_title">Tamil Children's Bookstore</span></h1>
+						<div class="hero-btns">
+							<a href="shop.html" class="boxed-btn" data-i18n="book_collection">Book Collection</a>
+							<a href="contact.html" class="bordered-btn" data-i18n="contact_us">Contact Us</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Add more data-i18n attributes to other sections as needed -->
+
+<!-- Add this script tag right before the closing body tag -->
+<script src="assets/js/toggle-button.js"></script>
+<!-- jquery -->
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<!-- bootstrap -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- count down -->
+<script src="assets/js/jquery.countdown.js"></script>
+<!-- isotope -->
+<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+<!-- waypoints -->
+<script src="assets/js/waypoints.js"></script>
+<!-- owl carousel -->
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- magnific popup -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!-- mean menu -->
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<!-- sticker js -->
+<script src="assets/js/sticker.js"></script>
+<!-- main js -->
+<script src="assets/js/main.js"></script>
+<!-- language toggle script -->
+<script src="assets/js/language-toggle.js"></script>
+
+</body>
+</html>

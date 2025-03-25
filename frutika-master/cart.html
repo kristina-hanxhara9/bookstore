@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mudivili - Tamil Children's Literature for the Diaspora">
+
+	<!-- title -->
+	<title>Cart - Mudivili</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/mudivili-photo/icons8-open-book-parakeet-color-16.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<!-- custom styles for cart page -->
+	<style>
+		/* Shopping Cart Styles */
+		.cart-count {
+			position: absolute;
+			top: -8px;
+			right: -8px;
+			background-color: #F28123;
+			color: white;
+			font-size: 12px;
+			font-weight: bold;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.shopping-cart {
+			position: relative;
+			display: inline-block;
+		}
+
+		/* Cart page specific styles */
+		.quantity-controls {
+			display: flex;
+			align-items: center;
+		}
+		
+		.quantity-controls button {
+			background-color: #f5f5f5;
+			border: 1px solid #ddd;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+		}
+		
+		.quantity-controls input {
+			width: 50px;
+			text-align: center;
+			border: 1px solid #ddd;
+			height: 30px;
+			margin: 0 5px;
+		}
+		
+		.empty-cart-message {
+			padding: 40px;
+			background-color: #f9f9f9;
+			border-radius: 5px;
+			margin-bottom: 30px;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/mudivili-photo/logo.png" alt="Mudivili">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li><a href="index.html" data-i18n="home">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="#">Collections</a>
+									<ul class="sub-menu">
+										<li><a href="shop.html#first-steps">First Steps in Tamil</a></li>
+										<li><a href="shop.html#heritage">Tamil Heritage</a></li>
+										<li><a href="shop.html#devotional">Devotional Journey</a></li>
+										<li><a href="shop.html#playtime">Tamil Playtime</a></li>
+										<li><a href="shop.html#resilience">Resilience & Awareness</a></li>
+										<li><a href="shop.html#wisdom">Wisdom in Literature</a></li>
+									</ul>
+								</li>
+								<li><a href="news.html">Blog</a>
+									<ul class="sub-menu">
+										<li><a href="news.html">Blog</a></li>
+										<li><a href="single-news.html">Single Post</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="shop.html">Shop</a>
+									<ul class="sub-menu">
+										<li><a href="shop.html">All Books</a></li>
+										<li><a href="checkout.html">Check Out</a></li>
+										<li><a href="single-product.html">Book Details</a></li>
+										<li class="current-list-item"><a href="cart.html">Cart</a></li>
+									</ul>
+								</li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart.html">
+											<i class="fas fa-shopping-cart"></i>
+											<span id="cart-count" class="cart-count"></span>
+										</a>
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search area -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Tamil Books for Children</p>
+						<h1>Your Shopping Cart</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- cart -->
+	<div class="cart-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center" id="empty-cart-message" style="display: none;">
+					<div class="empty-cart-message">
+						<i class="fas fa-shopping-cart" style="font-size: 64px; color: #ddd; margin-bottom: 20px;"></i>
+						<h3>Your cart is empty</h3>
+						<p>Looks like you haven't added any books to your cart yet.</p>
+						<a href="shop.html" class="boxed-btn mt-4">Continue Shopping</a>
+					</div>
+				</div>
+				
+				<div class="col-lg-8 col-md-12">
+					<div class="cart-table-wrap">
+						<table class="cart-table">
+							<thead class="cart-table-head">
+								<tr class="table-head-row">
+									<th class="product-remove"></th>
+									<th class="product-image">Book Cover</th>
+									<th class="product-name">Title</th>
+									<th class="product-price">Price</th>
+									<th class="product-quantity">Quantity</th>
+									<th class="product-total">Total</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Cart items will be inserted here by JavaScript -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="total-section">
+						<table class="total-table">
+							<thead class="total-table-head">
+								<tr class="table-total-row">
+									<th>Total</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="total-data">
+									<td><strong>Subtotal: </strong></td>
+									<td class="subtotal-value">£0.00</td>
+								</tr>
+								<tr class="total-data">
+									<td><strong>Shipping: </strong></td>
+									<td class="shipping-value">£0.00</td>
+								</tr>
+								<tr class="total-data">
+									<td><strong>Total: </strong></td>
+									<td class="total-value">£0.00</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="cart-buttons">
+							<a href="#" class="boxed-btn update-cart">Update Cart</a>
+							<a href="checkout.html" class="boxed-btn black checkout-btn">Check Out</a>
+						</div>
+					</div>
+
+					<div class="coupon-section">
+						<h3>Apply Coupon</h3>
+						<div class="coupon-form-wrap">
+							<form action="#" id="coupon-form">
+								<p><input type="text" placeholder="Coupon Code"></p>
+								<p><input type="submit" value="Apply"></p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end cart -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/1.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/2.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/3.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/4.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>Mudivili is a Tamil children's bookstore designed for future generations of the Tamil diaspora to explore and engage with the Tamil language.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<li>Mudivili Books, Stuttgart, Germany</li>
+							<li>hello@mudivili.com</li>
+							<li>+49 123 456 7890</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="shop.html">Collections</a></li>
+							<li><a href="news.html">Blog</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Subscribe</h2>
+						<p>Subscribe to our mailing list to get the latest updates on new books and events.</p>
+						<form action="index.html">
+							<input type="email" placeholder="Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2025 - <a href="#">Mudivili</a>, All Rights Reserved.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+	<!-- language toggle script -->
+	<script src="assets/js/language-toggle.js"></script>
+	
+	<!-- Cart page JavaScript -->
+	<script>
+	// Initialize cart page
+	document.addEventListener('DOMContentLoaded', function() {
+		loadCartItems();
+		setupCartEvents();
+		updateCartCount();
+	});
+
+	// Load cart items from localStorage
+	function loadCartItems() {
+		const cartData = JSON.parse(localStorage.getItem('mudiviliCart')) || [];
+		const cartTableBody = document.querySelector('.cart-table tbody');
+		const emptyCartMessage = document.getElementById('empty-cart-message');
+		
+		// Clear existing cart items
+		cartTableBody.innerHTML = '';
+		
+		if (cartData.length === 0) {
+			// Show empty cart message
+			if (emptyCartMessage) {
+				emptyCartMessage.style.display = 'block';
+			}
+			
+			// Hide cart table and checkout section
+			document.querySelector('.cart-table-wrap').style.display = 'none';
+			document.querySelector('.total-section').style.display = 'none';
+			document.querySelector('.coupon-section').style.display = 'none';
+			
+			return;
+		}
+		
+		// Hide empty cart message
+		if (emptyCartMessage) {
+			emptyCartMessage.style.display = 'none';
+		}
+		
+		// Show cart table and checkout section
+		document.querySelector('.cart-table-wrap').style.display = 'block';
+		document.querySelector('.total-section').style.display = 'block';
+		document.querySelector('.coupon-section').style.display = 'block';
+		
+		// Add cart items to table
+		let subtotal = 0;
+		
+		cartData.forEach(item => {
+			const itemTotal = item.price * item.quantity;
+			subtotal += itemTotal;
+			
+			const row = document.createElement('tr');
+			row.className = 'table-body-row';
+			row.setAttribute('data-product-id', item.id);
+			
+			row.innerHTML = `
+				<td class="product-remove"><a href="#" class="remove-item"><i class="far fa-window-close"></i></a></td>
+				<td class="product-image"><img src="${item.cover}" alt="${item.title}"></td>
+				<td class="product-name">${item.title}</td>
+				<td class="product-price">£${item.price}</td>
+				<td class="product-quantity">
+					<div class="quantity-controls">
+						<button class="decrease-quantity">-</button>
+						<input type="number" value="${item.quantity}" min="1" class="item-quantity">
+						<button class="increase-quantity">+</button>
+					</div>
+				</td>
+				<td class="product-total">£${itemTotal.toFixed(2)}</td>
+			`;
+			
+			cartTableBody.appendChild(row);
+		});
+		
+		// Update cart totals
+		updateCartTotals(subtotal);
+	}
+
+	// Update cart totals
+	function updateCartTotals(subtotal) {
+		const shipping = subtotal > 0 ? 5.00 : 0; // £5 shipping fee
+		const total = subtotal + shipping;
+		
+		document.querySelector('.total-table tbody .subtotal-value').textContent = `£${subtotal.toFixed(2)}`;
+		document.querySelector('.total-table tbody .shipping-value').textContent = `£${shipping.toFixed(2)}`;
+		document.querySelector('.total-table tbody .total-value').textContent = `£${total.toFixed(2)}`;
+	}
+
+	// Setup cart events
+	function setupCartEvents() {
+		const cartTableBody = document.querySelector('.cart-table tbody');
+		
+		// Event delegation for cart actions
+		cartTableBody.addEventListener('click', function(e) {
+			const target = e.target;
+			const row = target.closest('.table-body-row');
+			
+			if (!row) return;
+			
+			const productId = row.getAttribute('data-product-id');
+			
+			// Remove item button
+			if (target.closest('.remove-item')) {
+				e.preventDefault();
+				removeCartItem(productId);
+			}
+			
+			// Decrease quantity button
+			if (target.closest('.decrease-quantity')) {
+				e.preventDefault();
+				updateCartItemQuantity(productId, -1);
+			}
+			
+			// Increase quantity button
+			if (target.closest('.increase-quantity')) {
+				e.preventDefault();
+				updateCartItemQuantity(productId, 1);
+			}
+		});
+		
+		// Quantity input change
+		cartTableBody.addEventListener('change', function(e) {
+			const target = e.target;
+			
+			if (target.matches('.item-quantity')) {
+				const row = target.closest('.table-body-row');
+				if (!row) return;
+				
+				const productId = row.getAttribute('data-product-id');
+				const newQuantity = parseInt(target.value, 10);
+				
+				if (newQuantity > 0) {
+					setCartItemQuantity(productId, newQuantity);
+				} else {
+					target.value = 1;
+					setCartItemQuantity(productId, 1);
+				}
+			}
+		});
+		
+		// Update cart button
+		document.querySelector('.cart-buttons .update-cart').addEventListener('click', function(e) {
+			e.preventDefault();
+			loadCartItems();
+		});
+	}
+
+	// Remove item from cart
+	function removeCartItem(productId) {
+		let cartData = JSON.parse(localStorage.getItem('mudiviliCart')) || [];
+		
+		// Filter out the removed item
+		cartData = cartData.filter(item => item.id !== productId);
+		
+		// Save updated cart
+		localStorage.setItem('mudiviliCart', JSON.stringify(cartData));
+		
+		// Reload cart items
+		loadCartItems();
+		updateCartCount();
+	}
+
+	// Update cart item quantity
+	function updateCartItemQuantity(productId, change) {
+		const cartData = JSON.parse(localStorage.getItem('mudiviliCart')) || [];
+		const item = cartData.find(item => item.id === productId);
+		
+		if (item) {
+			item.quantity = Math.max(1, item.quantity + change);
+			localStorage.setItem('mudiviliCart', JSON.stringify(cartData));
+			loadCartItems();
+			updateCartCount();
+		}
+	}
+
+	// Set cart item quantity
+	function setCartItemQuantity(productId, quantity) {
+		const cartData = JSON.parse(localStorage.getItem('mudiviliCart')) || [];
+		const item = cartData.find(item => item.id === productId);
+		
+		if (item) {
+			item.quantity = quantity;
+			localStorage.setItem('mudiviliCart', JSON.stringify(cartData));
+			loadCartItems();
+			updateCartCount();
+		}
+	}
+
+	// Update cart count in header
+	function updateCartCount() {
+		const cartData = JSON.parse(localStorage.getItem('mudiviliCart')) || [];
+		const count = cartData.reduce((total, item) => total + item.quantity, 0);
+		const cartCountElement = document.getElementById('cart-count');
+		
+		if (cartCountElement) {
+			cartCountElement.textContent = count > 0 ? count : '';
+			
+			if (count > 0) {
+				cartCountElement.style.display = 'flex';
+			} else {
+				cartCountElement.style.display = 'none';
+			}
+		}
+	}
+	</script>
+
+</body>
+</html>
