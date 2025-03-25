@@ -167,7 +167,7 @@
 
 }(jQuery));
 
-// Add this to assets/js/main.js or create a new JS file and link it in the HTML
+// Add this to ./mudivilli/assets/js/main.js or create a new JS file and link it in the HTML
 
 $(document).ready(function() {
     // Check if there's a hash in the URL

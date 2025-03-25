@@ -336,7 +336,7 @@ function addTamilFontSupport() {
     style.textContent = `
       @font-face {
         font-family: 'Catamaran';
-        src: url('assets/fonts/Catamaran-Regular.ttf') format('truetype');
+        src: url('./mudivilli/assets/fonts/Catamaran-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
       }
